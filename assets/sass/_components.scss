@@ -1,0 +1,84 @@
+.color-red {
+    color: #ff4757 !important;
+}
+
+.color-green {
+    color: #2ed573 !important;
+}
+
+.eventblue {
+    background-color: #1e90ff !important;
+}
+
+.eventred {
+    background-color: #ff4757 !important;
+}
+
+.eventgreen {
+    background-color: #2ed573 !important;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    @include flexbox();
+}
+
+.align-items-center {
+    @include align-items(center);
+}
+
+.align-items-start {
+    @include align-items(flex-start);
+}
+
+.align-space-between {
+    @include justify-content(space-between);
+}
+
+.align-end {
+    @include justify-content(flex-end);
+}
+
+// text
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.cr-black {
+    color: #484848 !important;
+}
+
+.cr-gray {
+    color: #767676 !important;
+}
+
+.fs-14 {
+    font-size: 14px !important;
+}
+
+.fs-16 {
+    font-size: 16px !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
