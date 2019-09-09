@@ -1,0 +1,33 @@
+.ant-layout-sider {
+    & .brand-sider {
+        line-height: 64px;
+        height: 64px;
+        & .logo {
+            background-size: cover;
+            margin: 0 auto;
+            height: 40px;
+            width: 40px;
+        }
+        & .logo-text {
+            font-size: 24px;
+            color: #ffffff;
+            margin: 0 auto;
+        }
+    }
+    & .avatar {
+        padding: 24px 0;
+        & .avatar-item {
+            text-align: center;
+            margin: 0 auto;
+            & .name-user {
+                font-size: 15px;
+                margin-top: 8px;
+                color: #ffffff;
+                opacity: .8;
+            }
+        }
+    }
+    & .ant-divider {
+        background-color: rgba($color: #ffffff, $alpha: .2);
+    }
+}

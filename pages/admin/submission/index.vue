@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <a-row :gutter="16" type="flex" justify="space-around" align="middle">
-      <a-col :xs="24" sm="12" :md="12">
+      <a-col :xs="24" :sm="12" :md="12">
         <div class="title">Daftar Pengajuan</div>
       </a-col>
-      <a-col :xs="24" sm="12" :md="12" class="text-right">
+      <a-col :xs="24" :sm="12" :md="12" class="text-right">
         <a-button
           @click="showSubmission"
           type="primary"
@@ -43,6 +43,7 @@
       :footer="false"
       v-model="visibleSubmission"
       @ok="handleSubmission"
+      centered
     >
       <a-form layout="vertical" :form="form" @submit="handleSubmit" hideRequiredMark>
         <a-form-item label="Jenis Kegiatan" has-feedback>

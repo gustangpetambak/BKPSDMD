@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <div class="title" style="padding-bottom: 0">Rundown Kegiatan</div>
-    <no-ssr>
-      <full-calendar :events="fcEvents" locale="en" @eventClick="eventClick"></full-calendar>
-    </no-ssr>
+    <full-calendar :events="fcEvents" locale="en" @eventClick="eventClick"></full-calendar>
+    
     <a-modal
       title="Diklat Prajabatan Golongan I Angkatan X dan XI Tahun 2019 Makassar"
       v-model="visible"
       @ok="handleOk"
+      centered
     >
       <div class="fs-16 cr-black">Rundown Kegiatan</div>
-      <a-timeline v-model="value" :style="{ marginTop: '24px' }">
+      <a-timeline :style="{ marginTop: '24px' }">
         <a-timeline-item>
           <div class="txt-day fs-14 cr-black">Hari ke 1</div>
           <div

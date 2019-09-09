@@ -1,33 +1,31 @@
-.ant-layout-sider {
-    & .brand-sider {
-        line-height: 64px;
-        height: 64px;
-        & .logo {
-            background-size: cover;
-            margin: 0 auto;
-            height: 40px;
-            width: 40px;
-        }
-        & .logo-text {
-            font-size: 24px;
-            color: #ffffff;
-            margin: 0 auto;
+.ant-layout-header {
+    padding: 0 16px;
+}
+
+.ant-drawer-content-wrapper {
+    box-shadow: none !important;
+    & .ant-drawer-header {
+        & .ant-btn {
+            background: #f5f5f5;
+            border: none;
         }
     }
-    & .avatar {
-        padding: 24px 0;
-        & .avatar-item {
-            text-align: center;
-            margin: 0 auto;
-            & .name-user {
-                font-size: 15px;
-                margin-top: 8px;
-                color: #ffffff;
-                opacity: .8;
+    & .ant-drawer-body {
+        & .name-user {
+            line-height: normal;
+        }
+        & .ant-menu {
+            border: none;
+            & .ant-menu-item {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                &::after {
+                    display: none;
+                }
             }
         }
-    }
-    & .ant-divider {
-        background-color: rgba($color: #ffffff, $alpha: .2);
+        & .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+            background-color: transparent !important;
+        }
     }
 }

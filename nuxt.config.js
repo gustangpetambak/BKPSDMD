@@ -30,7 +30,7 @@ export default {
      */
     plugins: [
         { src: '@/plugins/antd-ui' },
-        { src: '@/plugins/fullcalendar', ssr: false }
+        { src: '@/plugins/fullcalendar', mode: 'client' }
     ],
     /*
      ** Nuxt.js dev-modules

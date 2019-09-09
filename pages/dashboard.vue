@@ -1,6 +1,6 @@
 <template>
   <a-row :gutter="16">
-    <a-col :xs="24" :sm="12" :md="8">
+    <a-col :xs="24" :sm="12" :md="8" :style="{ marginBottom: '16px' }">
       <div class="container">
         <a-card :bordered="false">
           <div class="d-flex align-items-center">
@@ -16,7 +16,7 @@
       </div>
     </a-col>
 
-    <a-col :xs="24" :sm="12" :md="8">
+    <a-col :xs="24" :sm="12" :md="8" :style="{ marginBottom: '16px' }">
       <div class="container">
         <a-card :bordered="false">
           <div class="d-flex align-items-center">
@@ -32,7 +32,7 @@
       </div>
     </a-col>
 
-    <a-col :xs="24" :sm="12" :md="8">
+    <a-col :xs="24" :sm="12" :md="8" :style="{ marginBottom: '16px' }">
       <div class="container">
         <a-card :bordered="false">
           <div class="d-flex align-items-center">
