@@ -17,6 +17,7 @@
           <span>Dashboard</span>
         </nuxt-link>
       </a-menu-item>
+      
       <a-menu-item-group key="g1">
         <template slot="title">
           <span class="text-uppercase">Menu Admin</span>
