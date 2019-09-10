@@ -45,12 +45,12 @@
             <span>Daftar Pengajuan</span>
           </nuxt-link>
         </a-menu-item>
-        <a-menu-item key="3">
+        <!-- <a-menu-item key="3">
           <nuxt-link to="/admin/rundown">
             <a-icon type="schedule" />
             <span>Rundown</span>
           </nuxt-link>
-        </a-menu-item>
+        </a-menu-item> -->
         <a-menu-item key="4">
           <nuxt-link to="/admin/report">
             <a-icon type="printer" />

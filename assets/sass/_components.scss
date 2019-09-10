@@ -74,12 +74,24 @@
     text-align: right;
 }
 
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
 .cr-black {
     color: #484848 !important;
 }
 
 .cr-gray {
     color: #767676 !important;
+}
+
+.fs-12 {
+    font-size: 12px !important;
 }
 
 .fs-14 {

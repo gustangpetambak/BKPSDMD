@@ -1,18 +1,7 @@
 <template>
   <div class="container">
-    <a-row :gutter="16" type="flex" justify="space-around" align="middle">
-      <a-col :xs="24" :sm="12" :md="12">
-        <div class="title">Daftar Pengajuan</div>
-      </a-col>
-      <a-col :xs="24" :sm="12" :md="12" class="text-right">
-        <a-button
-          @click="showSubmission"
-          type="primary"
-          icon="plus"
-          :style="{ marginRight: '16px' }"
-        >Buat Pengajuan</a-button>
-      </a-col>
-    </a-row>
+    <div class="title">Daftar Pengajuan</div>
+
     <a-table :columns="columns" :dataSource="data" :scroll="{ x: 980 }">
       <span slot="action" slot-scope="text, record">
         <a href="javascript:;" class="color-green">Approve</a>
@@ -34,46 +23,6 @@
         </a-form-item>
 
         <a-button type="primary" @click="handleReject">Kirim</a-button>
-      </a-form>
-    </a-modal>
-
-    <!-- if add submission show modal -->
-    <a-modal
-      title="Buat Pengajuan"
-      :footer="false"
-      v-model="visibleSubmission"
-      @ok="handleSubmission"
-      centered
-    >
-      <a-form layout="vertical" :form="form" @submit="handleSubmit" hideRequiredMark>
-        <a-form-item label="Jenis Kegiatan" has-feedback>
-          <a-select
-            v-decorator="[
-          'select',
-          {rules: [{ required: true, message: 'Harus di isi!' }]}
-        ]"
-            placeholder="Pilih Jenis Kegiatan"
-          >
-            <a-select-option value="1">Kegiatan 1</a-select-option>
-            <a-select-option value="2">Kegiatan 2</a-select-option>
-          </a-select>
-        </a-form-item>
-
-        <a-form-item label="Tanggal Kegiatan" has-feedback>
-          <a-date-picker style="width: 100%" v-decorator="['date-picker', config]" />
-        </a-form-item>
-
-        <a-form-item label="Jumlah Peserta" has-feedback>
-          <a-input
-            v-decorator="[
-          'jumlahpeserta',
-          {
-            rules: [{ required: true, message: 'Harus di isi!' }]
-          }
-        ]"
-          />
-        </a-form-item>
-        <a-button type="primary" html-type="submit">Kirim Pengajuan</a-button>
       </a-form>
     </a-modal>
   </div>
@@ -127,12 +76,8 @@ export default {
   data() {
     return {
       visibleReject: false,
-      visibleSubmission: false,
       data,
-      columns,
-      config: {
-        rules: [{ type: "object", required: true, message: "Pilih Tanggal!" }]
-      }
+      columns
     };
   },
   methods: {
@@ -141,12 +86,6 @@ export default {
     },
     handleReject() {
       this.visibleReject = false;
-    },
-    showSubmission() {
-      this.visibleSubmission = true;
-    },
-    handleSubmission() {
-      this.visibleSubmission = false;
     },
     handleSubmit(e) {
       e.preventDefault();

@@ -7,6 +7,14 @@
         color: #484848;
         font-weight: 600;
     }
+    & .ant-table-thead>tr>th {
+        text-transform: uppercase;
+        color: #767676 !important;
+        font-size: 12px;
+    }
+    & .ant-table-tbody>tr>td {
+        color: #484848 !important;
+    }
 }
 
 .comp-full-calendar {
