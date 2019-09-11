@@ -104,7 +104,7 @@
             <span>Daftar Kegiatan</span>
           </nuxt-link>
         </a-menu-item>
-        <a-menu-item key="g3-1">
+        <a-menu-item key="g3-2">
           <nuxt-link to="/member/profile">
             <a-icon type="user" />
             <span>Pengaturan Profil</span>

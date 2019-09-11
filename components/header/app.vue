@@ -7,11 +7,18 @@
         </a>
       </div>
       <div style="margin-right: 16px" class="hidden-dekstop fs-18 cr-black">BKPSDMD</div>
-      <div class="hidden-mobile"><a-badge status="success" text="Online" /></div>
+      <div class="hidden-mobile">
+        <a-badge status="success" text="Online" />
+      </div>
 
       <div class="ml-auto">
         <a-avatar class="hidden-mobile" icon="poweroff" style="margin-right: 8px" />
-        <a-avatar class="hidden-dekstop" style="backgroundColor:#fafafa" size="large" src="/user.png" />
+        <a-avatar
+          class="hidden-dekstop"
+          style="backgroundColor:#fafafa"
+          size="large"
+          src="/user.png"
+        />
       </div>
     </div>
 
@@ -39,6 +46,7 @@
             <span>Dashboard</span>
           </nuxt-link>
         </a-menu-item>
+
         <a-menu-item-group key="g1">
         <template slot="title">
           <span class="text-uppercase">Menu Admin</span>
@@ -46,7 +54,7 @@
         <a-menu-item key="2">
           <nuxt-link to="/admin/submission">
             <a-icon type="tags" />
-            <span>Daftar Pengajuan</span>
+            <span>Semua Pengajuan</span>
           </nuxt-link>
         </a-menu-item>
         <a-menu-item key="3">
@@ -56,6 +64,24 @@
           </nuxt-link>
         </a-menu-item>
         <a-menu-item key="4">
+          <nuxt-link to="/admin/kantor">
+            <a-icon type="cluster" />
+            <span>Daftar Kantor</span>
+          </nuxt-link>
+        </a-menu-item>
+        <a-sub-menu key="sub2">
+          <span slot="title">
+            <a-icon type="appstore" />
+            <span>Manajemen</span>
+          </span>
+          <a-menu-item key="9">
+            <nuxt-link to="/admin/manajemen/diklat">Diklat / Kegiatan</nuxt-link>
+          </a-menu-item>
+          <a-menu-item key="10">
+            <nuxt-link to="/admin/manajemen/room">Tempat Kegiatan</nuxt-link>
+          </a-menu-item>
+        </a-sub-menu>
+        <a-menu-item key="5">
           <nuxt-link to="/admin/report">
             <a-icon type="printer" />
             <span>Laporan</span>
@@ -95,16 +121,25 @@
         </a-menu-item>
       </a-menu-item-group>
 
-      <!-- <a-menu-item key="3">
-        <nuxt-link to="/admin/rundown">
-          <a-icon type="schedule" />
-          <span>Rundown</span>
-        </nuxt-link>
-      </a-menu-item>-->
-      <!-- <a-menu-item key="5">
-        <a-icon type="idcard" />
-        <span>Profil Saya</span>
-      </a-menu-item>-->
+      <!-- menu MEMBER -->
+
+      <a-menu-item-group key="g3">
+        <template slot="title">
+          <span class="text-uppercase">Menu Member</span>
+        </template>
+        <a-menu-item key="g3-1">
+          <nuxt-link to="/member/activities">
+            <a-icon type="book" />
+            <span>Daftar Kegiatan</span>
+          </nuxt-link>
+        </a-menu-item>
+        <a-menu-item key="g3-2">
+          <nuxt-link to="/member/profile">
+            <a-icon type="user" />
+            <span>Pengaturan Profil</span>
+          </nuxt-link>
+        </a-menu-item>
+      </a-menu-item-group>
       </a-menu>
     </a-drawer>
   </div>
