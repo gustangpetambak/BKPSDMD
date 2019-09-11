@@ -2,7 +2,7 @@
   <div class="container">
     <a-row :gutter="16" type="flex" justify="space-around" align="middle">
       <a-col :xs="24" :sm="12" :md="12">
-        <div class="title">Daftar SKPD</div>
+        <div class="title">Daftar Badan Kepegawaian Daerah</div>
       </a-col>
       <a-col :xs="24" :sm="12" :md="12" class="text-right">
         <a-button
@@ -26,10 +26,10 @@
       </span>
     </a-table>
 
-    <!-- if add skpd show modal -->
-    <a-modal title="Tambah SKPD" :footer="false" v-model="visibleAdd" @ok="handleAdd" centered>
+    <!-- if add bkd show modal -->
+    <a-modal title="Tambah" :footer="false" v-model="visibleAdd" @ok="handleAdd" centered>
       <a-form layout="vertical" :form="form" @submit="handleSubmitAdd" hideRequiredMark>
-        <a-form-item label="Nama/Jabatan/SKPD" has-feedback>
+        <a-form-item label="Nama / Kantor" has-feedback>
           <a-input
             v-decorator="[
           'name',
@@ -66,25 +66,25 @@
       </a-form>
     </a-modal>
 
-    <!-- if edit skpd show modal -->
-    <a-modal title="Edit SKPD" :footer="false" v-model="visibleEdit" @ok="handleEdit" centered>
+    <!-- if edit bkd show modal -->
+    <a-modal title="Edit" :footer="false" v-model="visibleEdit" @ok="handleEdit" centered>
       <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
-        <a-form-item label="Nama/Jabatan/SKPD" has-feedback>
+        <a-form-item label="Nama / Kantor" has-feedback>
           <a-input
-            v-decorator="['name',{initialValue: ['Badan Pemberdayaan Masyarakat'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['nameEdit',{initialValue: ['Badan Pemberdayaan Masyarakat'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
 
         <a-form-item label="No. Telepon" has-feedback>
           <a-input
-            v-decorator="['telp',{initialValue: ['315049'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['telpEdit',{initialValue: ['315049'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
 
         <a-form-item label="Alamat">
           <a-textarea
             :rows="4"
-            v-decorator="['address',{initialValue: ['Jl. Ahmad Yani No.2'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['addressEdit',{initialValue: ['Jl. Ahmad Yani No.2'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>
@@ -100,7 +100,7 @@ const columns = [
     key: "key"
   },
   {
-    title: "Nama/Jabatan",
+    title: "Nama / Kantor",
     dataIndex: "name",
     key: "name"
   },
@@ -142,7 +142,7 @@ export default {
   },
   head() {
     return {
-      title: "Daftar SKPD - BKD"
+      title: "Daftar Badan Kepegawaian Daerah"
     };
   },
   data() {
