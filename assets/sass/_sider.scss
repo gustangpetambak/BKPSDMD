@@ -1,4 +1,8 @@
 .ant-layout-sider {
+    flex: 0 0 225px;
+    max-width: 225px !important;
+    min-width: 225px !important;
+    width: 225px !important;
     & .brand-sider {
         line-height: 64px;
         height: 64px;
@@ -29,5 +33,8 @@
     }
     & .ant-divider {
         background-color: rgba($color: #ffffff, $alpha: .2);
+    }
+    & .ant-layout-sider-trigger {
+        width: 225px !important;
     }
 }
