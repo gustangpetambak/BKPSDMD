@@ -45,11 +45,14 @@
             <a-icon type="appstore" />
             <span>Manajemen</span>
           </span>
-          <a-menu-item key="9">
-            <nuxt-link to="/admin/manajemen/diklat">Diklat / Kegiatan</nuxt-link>
+          <a-menu-item key="sub2-1">
+            <nuxt-link to="/admin/manajemen/diklat">Diklat/Kegiatan</nuxt-link>
           </a-menu-item>
-          <a-menu-item key="10">
+          <a-menu-item key="sub2-2">
             <nuxt-link to="/admin/manajemen/room">Tempat Kegiatan</nuxt-link>
+          </a-menu-item>
+          <a-menu-item key="sub2-3">
+            <nuxt-link to="/admin/manajemen/widiasuara">Widiasuara/Pengajar</nuxt-link>
           </a-menu-item>
         </a-sub-menu>
         <a-menu-item key="5">
