@@ -48,7 +48,7 @@
       <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
         <a-form-item label="Nama Widiasuara/Pengajar" has-feedback>
           <a-input
-            v-decorator="['nameEdit',{initialValue: ['Widya Pitaloka'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['nameEdit',{initialValue: 'Widya Pitaloka', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>

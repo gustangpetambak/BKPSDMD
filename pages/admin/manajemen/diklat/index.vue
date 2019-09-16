@@ -60,13 +60,13 @@
       <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
         <a-form-item label="Jenis Diklat / Kegiatan" has-feedback>
           <a-input
-            v-decorator="['name',{initialValue: ['Diklat I'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['name',{initialValue: 'Diklat I', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
 
         <a-form-item label="Durasi / Lama Pelaksanaan Kegiatan" has-feedback>
           <a-input
-            v-decorator="['time',{initialValue: ['2 Bulan'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['time',{initialValue: '2 Bulan', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>

@@ -58,12 +58,12 @@
       <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
         <a-form-item label="Nama Tempat Kegiatan" has-feedback>
           <a-input
-            v-decorator="['nameEdit',{initialValue: ['Campus I'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['nameEdit',{initialValue: 'Campus I', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
          <a-form-item label="Ruangan" has-feedback>
           <a-input
-            v-decorator="['roomEdit',{initialValue: ['1B Lantai 1'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['roomEdit',{initialValue: '1B Lantai 1', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>

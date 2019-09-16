@@ -71,20 +71,20 @@
       <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
         <a-form-item label="Nama / Kantor" has-feedback>
           <a-input
-            v-decorator="['nameEdit',{initialValue: ['Badan Pemberdayaan Masyarakat'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['nameEdit',{initialValue: 'Badan Pemberdayaan Masyarakat', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
 
         <a-form-item label="No. Telepon" has-feedback>
           <a-input
-            v-decorator="['telpEdit',{initialValue: ['315049'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['telpEdit',{initialValue: '315049', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
 
         <a-form-item label="Alamat">
           <a-textarea
             :rows="4"
-            v-decorator="['addressEdit',{initialValue: ['Jl. Ahmad Yani No.2'], rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['addressEdit',{initialValue: 'Jl. Ahmad Yani No.2', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>
