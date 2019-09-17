@@ -3,10 +3,10 @@
     <div class="title">Semua Kegiatan</div>
 
     <a-table :columns="columns" :dataSource="data" :scroll="{ x: 980 }">
-      <span slot="action" slot-scope="text, record">
-        <nuxt-link to="/admin/activities/detail">
-          Lihat Detail <a-icon class="fs-12" type="right" />
-        </nuxt-link>
+      <span slot="action" slot-scope="text">
+        <nuxt-link to="/admin/activities/rundown">Rundown</nuxt-link>
+        <a-divider type="vertical"></a-divider>
+        <nuxt-link to="/admin/activities/detail">Detail</nuxt-link>
       </span>
     </a-table>
   </div>
@@ -25,7 +25,7 @@ const columns = [
     title: "Action",
     key: "operation",
     fixed: "right",
-    width: 140,
+    width: 170,
     scopedSlots: { customRender: "action" }
   }
 ];

@@ -49,7 +49,7 @@
             <div class="fw-500 cr-black">
               <span class="fs-15">Hari ke 1</span>
               <a-divider type="vertical"></a-divider>
-              <span class="fs-14">12 Januari 2020</span>
+              <span class="fs-14">Senin, 12 Januari 2020</span>
             </div>
             <div class="fs-14 fw-400 cr-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur explicabo ullam hic recusandae vel? Ab officia dolorem odio aperiam! Similique totam eos reprehenderit ipsa iure odio corporis molestiae illum!
@@ -59,7 +59,7 @@
             <div class="fw-500 cr-black">
               <span class="fs-15">Hari ke 2</span>
               <a-divider type="vertical"></a-divider>
-              <span class="fs-14">13 Januari 2020</span>
+              <span class="fs-14">Selasa, 13 Januari 2020</span>
             </div>
             <div class="fs-14 fw-400 cr-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur explicabo ullam hic recusandae vel? Ab officia dolorem odio aperiam! Similique totam eos reprehenderit ipsa iure odio corporis molestiae illum!
@@ -69,7 +69,7 @@
             <div class="fw-500 cr-black">
               <span class="fs-15">Hari ke 3</span>
               <a-divider type="vertical"></a-divider>
-              <span class="fs-14">14 Januari 2020</span>
+              <span class="fs-14">Rabu, 14 Januari 2020</span>
             </div>
             <div class="fs-14 fw-400 cr-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur explicabo ullam hic recusandae vel? Ab officia dolorem odio aperiam! Similique totam eos reprehenderit ipsa iure odio corporis molestiae illum!
@@ -79,7 +79,7 @@
             <div class="fw-500 cr-black">
               <span class="fs-15">Hari ke 4</span>
               <a-divider type="vertical"></a-divider>
-              <span class="fs-14">15 Januari 2020</span>
+              <span class="fs-14">Kamis, 15 Januari 2020</span>
             </div>
             <div class="fs-14 fw-400 cr-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur explicabo ullam hic recusandae vel? Ab officia dolorem odio aperiam! Similique totam eos reprehenderit ipsa iure odio corporis molestiae illum!
@@ -89,7 +89,7 @@
             <div class="fw-500 cr-black">
               <span class="fs-15">Hari ke 5</span>
               <a-divider type="vertical"></a-divider>
-              <span class="fs-14">16 Januari 2020</span>
+              <span class="fs-14">Jumat, 16 Januari 2020</span>
             </div>
             <div class="fs-14 fw-400 cr-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur explicabo ullam hic recusandae vel? Ab officia dolorem odio aperiam! Similique totam eos reprehenderit ipsa iure odio corporis molestiae illum!
@@ -99,7 +99,7 @@
             <div class="fw-500 cr-black">
               <span class="fs-15">Hari ke 6</span>
               <a-divider type="vertical"></a-divider>
-              <span class="fs-14">17 Januari 2020</span>
+              <span class="fs-14">Sabtu, 17 Januari 2020</span>
             </div>
             <div class="fs-14 fw-400 cr-black">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem pariatur explicabo ullam hic recusandae vel? Ab officia dolorem odio aperiam! Similique totam eos reprehenderit ipsa iure odio corporis molestiae illum!

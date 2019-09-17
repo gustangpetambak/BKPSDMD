@@ -13,18 +13,10 @@
           </span>
         </span>
 
-        <span slot="action" slot-scope="text, record">
-          <nuxt-link to="/member/activities/detail">
-            <a-tooltip placement="topLeft" title="Lihat Detail" arrowPointAtCenter>
-              <a-icon class="color-green fs-16" type="read" />
-            </a-tooltip>
-          </nuxt-link>
+        <span slot="action" slot-scope="text" :key="text">
+          <nuxt-link to="/member/activities/rundown">Rundown</nuxt-link>
           <a-divider type="vertical"></a-divider>
-          <nuxt-link to="/member/activities/rundown">
-            <a-tooltip placement="topLeft" title="Lihat Rundown" arrowPointAtCenter>
-              <a-icon class="color-blue fs-16" type="schedule" />
-            </a-tooltip>
-          </nuxt-link>
+          <nuxt-link to="/member/activities/detail">Detail</nuxt-link>
         </span>
       </a-table>
     </div>
@@ -49,7 +41,7 @@ const columns = [
   {
     title: "Action",
     fixed: "right",
-    width: 120,
+    width: 170,
     scopedSlots: { customRender: "action" }
   }
 ];
