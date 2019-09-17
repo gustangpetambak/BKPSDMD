@@ -4,7 +4,7 @@
 
     <a-table :columns="columns" :dataSource="data" :scroll="{ x: 980 }">
       <span slot="action" slot-scope="text, record">
-        <a @click="showApprove" class="color-green">Approve</a>
+        <a @click="showApprove" class="color-blue">Approve</a>
         <a-divider type="vertical" />
         <a @click="showReject" class="color-red">Tolak</a>
       </span>
@@ -51,6 +51,15 @@
           </a-select>
         </a-form-item>
 
+        <a-form-item label="Dokumen Persetujuan">
+          <a-upload-dragger name="file" :multiple="true" action="#" @change="handleChange" v-decorator="['file',{rules: [{ required: true, message: 'Harus di isi!' }]}]">
+            <p class="ant-upload-drag-icon">
+              <a-icon type="inbox" />
+            </p>
+            <p class="ant-upload-text fs-14 cr-gray">Click or drag file to this area to upload</p>
+          </a-upload-dragger>
+        </a-form-item>
+
         <a-button type="primary" html-type="submit">Kirim</a-button>
       </a-form>
     </a-modal>
@@ -82,8 +91,8 @@ const columns = [
     dataIndex: "name",
     key: "name"
   },
-  { title: "SKPD", dataIndex: "skpd", key: "skpd" },
-  { title: "Jumlah Peserta", dataIndex: "jumlah", key: "jumlah" },
+  { title: "BKD", dataIndex: "bkd", key: "bkd" },
+  { title: "Peserta", dataIndex: "jumlah", key: "jumlah" },
   { title: "Waktu Kegiatan", dataIndex: "createdAt", key: "createdAt" },
   {
     title: "Action",
@@ -98,14 +107,14 @@ const data = [
   {
     key: "1",
     name: "Diklat Prajabatan Golongan I Angkatan X dan XI Tahun 2019",
-    skpd: "Dinas Perhubungan",
+    bkd: "Dinas Perhubungan",
     createdAt: "Senin, 10 November 2019",
     jumlah: "40"
   },
   {
     key: "2",
     name: "Diklat Prajabatan Golongan II Angkatan X dan XI Tahun 2019",
-    skpd: "Dinas Pengelolaan Kebersihan",
+    bkd: "Dinas Pengelolaan Kebersihan",
     createdAt: "Minggu, 17 November 2019",
     jumlah: "45"
   }
@@ -135,6 +144,17 @@ export default {
     },
     handleApprove() {
       this.visibleApprove = false;
+    },
+    handleChange(info) {
+      const status = info.file.status;
+      if (status !== "uploading") {
+        console.log(info.file, info.fileList);
+      }
+      if (status === "done") {
+        this.$message.success(`${info.file.name} file uploaded successfully.`);
+      } else if (status === "error") {
+        this.$message.error(`${info.file.name} file upload failed.`);
+      }
     },
     handleSubmitApprove(e) {
       e.preventDefault();

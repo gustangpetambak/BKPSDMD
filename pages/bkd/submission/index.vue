@@ -30,10 +30,7 @@
       <a-form layout="vertical" :form="form" @submit="handleSubmit" hideRequiredMark>
         <a-form-item label="Jenis Kegiatan" has-feedback>
           <a-select
-            v-decorator="[
-          'select',
-          {rules: [{ required: true, message: 'Harus di isi!' }]}
-        ]"
+            v-decorator="['kegiatan',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
             placeholder="Pilih Jenis Kegiatan"
           >
             <a-select-option value="1">Kegiatan 1</a-select-option>
@@ -42,31 +39,37 @@
         </a-form-item>
 
         <a-form-item label="Tanggal Kegiatan" has-feedback>
-          <a-range-picker style="width: 100%" :placeholder="['Tanggal Mulai', 'Tanggal Berakhir']" :disabledDate="disabledDate" v-decorator="['date-picker', config]" />
+          <a-range-picker
+            style="width: 100%"
+            :placeholder="['Tanggal Mulai', 'Tanggal Berakhir']"
+            :disabledDate="disabledDate"
+            v-decorator="['date-picker', config]"
+          />
         </a-form-item>
 
         <a-form-item label="Jumlah Peserta" has-feedback>
           <a-input
-            v-decorator="[
-          'jumlahpeserta',
-          {
-            rules: [{ required: true, message: 'Harus di isi!' }]
-          }
-        ]"
+            v-decorator="['jumlahpeserta',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
 
         <a-form-item label="Tempat Kegiatan" has-feedback>
           <a-select
-            v-decorator="[
-          'tempat',
-          {rules: [{ required: true, message: 'Harus di isi!' }]}
-        ]"
+            v-decorator="['tempat',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
             placeholder="Pilih Tempat Kegiatan"
           >
             <a-select-option value="1">Kantor Pusat</a-select-option>
             <a-select-option value="2">Kabupaten</a-select-option>
           </a-select>
+        </a-form-item>
+
+        <a-form-item label="Dokumen Pengajuan">
+          <a-upload-dragger name="file" :multiple="true" action="#" @change="handleChange" v-decorator="['file',{rules: [{ required: true, message: 'Harus di isi!' }]}]">
+            <p class="ant-upload-drag-icon">
+              <a-icon type="inbox" />
+            </p>
+            <p class="ant-upload-text fs-14 cr-gray">Click or drag file to this area to upload</p>
+          </a-upload-dragger>
         </a-form-item>
         <a-button type="primary" html-type="submit">Kirim Pengajuan</a-button>
       </a-form>
@@ -74,7 +77,7 @@
   </div>
 </template>
 <script>
-import moment from 'moment';
+import moment from "moment";
 const columns = [
   {
     title: "Jenis Kegiatan",
@@ -83,7 +86,11 @@ const columns = [
   },
   { title: "Peserta", dataIndex: "member", key: "member" },
   { title: "Tanggal Kegiatan", dataIndex: "tgl_kegiatan", key: "tgl_kegiatan" },
-  { title: "Tanggal Pengajuan", dataIndex: "tgl_pengajuan", key: "tgl_pengajuan" },
+  {
+    title: "Tanggal Pengajuan",
+    dataIndex: "tgl_pengajuan",
+    key: "tgl_pengajuan"
+  },
   {
     title: "Status Pengajuan",
     key: "status",
@@ -140,6 +147,20 @@ export default {
     handleSubmission() {
       this.visibleSubmission = false;
     },
+    disabledDate(current) {
+      return current && current < moment().endOf("day");
+    },
+    handleChange(info) {
+      const status = info.file.status;
+      if (status !== "uploading") {
+        console.log(info.file, info.fileList);
+      }
+      if (status === "done") {
+        this.$message.success(`${info.file.name} file uploaded successfully.`);
+      } else if (status === "error") {
+        this.$message.error(`${info.file.name} file upload failed.`);
+      }
+    },
     handleSubmit(e) {
       e.preventDefault();
       this.form.validateFields((err, values) => {
@@ -147,10 +168,7 @@ export default {
           this.visibleSubmission = false;
         }
       });
-    },
-    disabledDate(current) {
-      return current && current < moment().endOf('day');
-    },
+    }
   }
 };
 </script>

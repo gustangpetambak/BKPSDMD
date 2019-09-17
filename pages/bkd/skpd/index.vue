@@ -100,7 +100,7 @@ const columns = [
     key: "key"
   },
   {
-    title: "Nama / Kantor",
+    title: "Nama SKPD",
     dataIndex: "name",
     key: "name"
   },

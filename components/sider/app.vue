@@ -10,7 +10,7 @@
         <div class="name-user">Jordi Alba Mustafa</div>
       </div>
     </div>
-    <a-menu theme="dark" :defaultSelectedKeys="['1']" mode="inline">
+    <a-menu :defaultSelectedKeys="['1']" mode="inline">
       <a-menu-item key="1">
         <nuxt-link to="/dashboard">
           <a-icon type="dashboard" />
@@ -37,7 +37,7 @@
         <a-menu-item key="4">
           <nuxt-link to="/admin/kantor">
             <a-icon type="cluster" />
-            <span>Daftar Kantor</span>
+            <span>Daftar BKD</span>
           </nuxt-link>
         </a-menu-item>
         <a-sub-menu key="sub2">

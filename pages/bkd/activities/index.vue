@@ -15,14 +15,14 @@
 
         <span slot="action" slot-scope="text, record">
           <span v-if="record.status === 'Progress'">
-            <nuxt-link to="/bkd/activities/formulir">
-              <a-button type="link" icon="form">Isi Formulir</a-button>
-            </nuxt-link>
+            <nuxt-link to="/bkd/activities/rundown">Rundown</nuxt-link>
+            <a-divider type="vertical"></a-divider>
+            <nuxt-link to="/bkd/activities/formulir">Formulir</nuxt-link>
           </span>
           <span v-if="record.status === 'Finish'">
-            <nuxt-link to="/bkd/activities/detail">
-              <a-button type="link" icon="idcard">Lihat Detail</a-button>
-            </nuxt-link>
+            <nuxt-link to="/bkd/activities/rundown">Rundown</nuxt-link>
+            <a-divider type="vertical"></a-divider>
+            <nuxt-link to="/bkd/activities/detail">Detail</nuxt-link>
           </span>
         </span>
       </a-table>
@@ -48,7 +48,7 @@ const columns = [
   {
     title: "Action",
     fixed: "right",
-    width: 100,
+    width: 170,
     scopedSlots: { customRender: "action" }
   }
 ];

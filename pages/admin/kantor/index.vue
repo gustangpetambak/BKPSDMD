@@ -2,7 +2,7 @@
   <div class="container">
     <a-row :gutter="16" type="flex" justify="space-around" align="middle">
       <a-col :xs="24" :sm="12" :md="12">
-        <div class="title">Daftar Badan Kepegawaian Daerah</div>
+        <div class="title">Daftar Badan Kepegawaian Daerah (BKD)</div>
       </a-col>
       <a-col :xs="24" :sm="12" :md="12" class="text-right">
         <a-button
@@ -100,7 +100,7 @@ const columns = [
     key: "key"
   },
   {
-    title: "Nama / Kantor",
+    title: "Nama BKD",
     dataIndex: "name",
     key: "name"
   },

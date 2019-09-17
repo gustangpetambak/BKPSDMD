@@ -17,6 +17,10 @@
     color: #2ed573 !important;
 }
 
+.color-blue {
+    color: #1e90ff !important;
+}
+
 .eventblue {
     background-color: #1e90ff !important;
 }
@@ -30,7 +34,11 @@
 }
 
 .ml-auto {
-    margin-left: auto;
+    margin-left: auto !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
 }
 
 .d-none {

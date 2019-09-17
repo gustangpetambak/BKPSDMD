@@ -15,7 +15,7 @@ const columns = [
     dataIndex: "name",
     key: "name"
   },
-  { title: "SKPD", dataIndex: "skpd", key: "skpd" },
+  { title: "BKD", dataIndex: "bkd", key: "bkd" },
   { title: "Jumlah Peserta", dataIndex: "jumlah", key: "jumlah" },
   { title: "Waktu Kegiatan", dataIndex: "createdAt", key: "createdAt" },
   {
@@ -31,20 +31,20 @@ const data = [
   {
     key: "1",
     name: "Diklat Prajabatan Golongan I Angkatan X dan XI Tahun 2019",
-    skpd: "Dinas Perhubungan",
+    bkd: "Dinas Perhubungan",
     createdAt: "Senin, 10 November 2019",
     jumlah: "40"
   },
   {
     key: "2",
     name: "Diklat Prajabatan Golongan II Angkatan X dan XI Tahun 2019",
-    skpd: "Dinas Pengelolaan Kebersihan",
+    bkd: "Dinas Pengelolaan Kebersihan",
     createdAt: "Minggu, 17 November 2019",
     jumlah: "45"
   }
 ];
 export default {
-  name: "submission",
+  name: "report",
   head() {
     return {
       title: "Laporan Kegiatan - BKPSDMD"
