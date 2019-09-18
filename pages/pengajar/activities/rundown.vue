@@ -50,7 +50,7 @@
         </a-row>
 
         <div>
-          <nuxt-link to="/member/activities/detail" class="color-blue">
+          <nuxt-link to="/pengajar/activities/detail" class="color-blue">
             Lihat Informasi Peserta <a-icon style="margin-left: 8px" type="right" />
           </nuxt-link>
         </div>

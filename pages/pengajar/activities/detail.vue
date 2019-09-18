@@ -50,7 +50,7 @@
         </a-row>
 
         <div>
-          <nuxt-link to="/member/activities/rundown" class="color-blue">
+          <nuxt-link to="/pengajar/activities/rundown" class="color-blue">
             Lihat Rundown Kegiatan <a-icon style="margin-left: 8px" type="right" />
           </nuxt-link>
         </div>

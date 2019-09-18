@@ -31,6 +31,23 @@
             <div class="fs-14 cr-black text-capitalize">Senin, 20 Desember 2019</div>
           </a-col>
         </a-row>
+
+        <a-row :gutter="16">
+          <a-col :xs="24" :sm="12" :md="10" style="margin-bottom: 16px">
+            <div class="fs-12 cr-gray text-uppercase">Tempat Kegiatan</div>
+            <div
+              class="fs-14 cr-black text-capitalize"
+            >Campus I</div>
+          </a-col>
+          <a-col :xs="24" :sm="12" :md="4" style="margin-bottom: 16px">
+            <div class="fs-12 cr-gray text-uppercase">Ruangan</div>
+            <div class="fs-14 cr-black text-capitalize">1B Lantai 1</div>
+          </a-col>
+          <a-col :xs="24" :sm="24" :md="10" style="margin-bottom: 16px">
+            <div class="fs-12 cr-gray text-uppercase">Alamat</div>
+            <div class="fs-14 cr-black text-capitalize">Jl. BTP Blok A No 537</div>
+          </a-col>
+        </a-row>
       </div>
     </div>
 

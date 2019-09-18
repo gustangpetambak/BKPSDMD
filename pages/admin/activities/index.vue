@@ -20,7 +20,7 @@ const columns = [
   },
   { title: "BKD", dataIndex: "bkd", key: "bkd" },
   { title: "Peserta", dataIndex: "jumlah", key: "jumlah" },
-  { title: "Waktu Kegiatan", dataIndex: "createdAt", key: "createdAt" },
+  { title: "Tanggal Kegiatan", dataIndex: "createdAt", key: "createdAt" },
   {
     title: "Action",
     key: "operation",

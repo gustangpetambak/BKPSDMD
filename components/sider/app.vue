@@ -61,6 +61,12 @@
             <span>Laporan</span>
           </nuxt-link>
         </a-menu-item>
+        <a-menu-item key="6">
+          <nuxt-link to="/admin/profile">
+            <a-icon type="user" />
+            <span>Pengaturan Akun</span>
+          </nuxt-link>
+        </a-menu-item>
       </a-menu-item-group>
 
       <!-- menu BKD kab/kota -->
@@ -93,6 +99,12 @@
             <span>Laporan</span>
           </nuxt-link>
         </a-menu-item>
+        <a-menu-item key="g2-5">
+          <nuxt-link to="/bkd/profile">
+            <a-icon type="user" />
+            <span>Pengaturan Akun</span>
+          </nuxt-link>
+        </a-menu-item>
       </a-menu-item-group>
 
       <!-- menu MEMBER -->
@@ -110,7 +122,27 @@
         <a-menu-item key="g3-2">
           <nuxt-link to="/member/profile">
             <a-icon type="user" />
-            <span>Pengaturan Profil</span>
+            <span>Pengaturan Akun</span>
+          </nuxt-link>
+        </a-menu-item>
+      </a-menu-item-group>
+
+      <!-- menu PENGAJAR -->
+
+      <a-menu-item-group key="g4">
+        <template slot="title">
+          <span class="text-uppercase">Menu Pengajar</span>
+        </template>
+        <a-menu-item key="g4-1">
+          <nuxt-link to="/pengajar/activities">
+            <a-icon type="book" />
+            <span>Daftar Kegiatan</span>
+          </nuxt-link>
+        </a-menu-item>
+        <a-menu-item key="g4-2">
+          <nuxt-link to="/pengajar/profile">
+            <a-icon type="user" />
+            <span>Pengaturan Akun</span>
           </nuxt-link>
         </a-menu-item>
       </a-menu-item-group>

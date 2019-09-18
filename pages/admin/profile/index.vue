@@ -3,7 +3,7 @@
     <div class="container" style="margin-bottom: 16px">
       <a-row :gutter="16" type="flex" justify="space-around" align="middle">
         <a-col :xs="24" :sm="12" :md="12">
-          <div class="title fs-18">Profil Saya</div>
+          <div class="title fs-18">Profil Kantor</div>
         </a-col>
         <a-col :xs="24" :sm="12" :md="12" class="text-right">
           <a-button
@@ -19,11 +19,11 @@
         <a-list-item>
           <a-row :gutter="8" type="flex" justify="space-around" align="middle" style="width: 100%">
             <a-col :xs="24" :sm="6" :md="4">
-              <span class="fs-14 cr-gray">Foto Profil</span>
+              <span class="fs-14 cr-gray">Logo/Foto Profil</span>
             </a-col>
             <a-col :xs="24" :sm="18" :md="20">
               <span>
-                <a-avatar :size="64" src="/user.png" />
+                <a-avatar :size="64" src="https://img4.apk.tools/300/7/b/9/com.bkpsdmd.portal.sample.png" />
               </span>
             </a-col>
           </a-row>
@@ -31,30 +31,10 @@
         <a-list-item>
           <a-row :gutter="8" style="width: 100%">
             <a-col :xs="24" :sm="6" :md="4">
-              <span class="fs-14 cr-gray">SKPD</span>
+              <span class="fs-14 cr-gray">Instansi</span>
             </a-col>
             <a-col :xs="24" :sm="18" :md="20">
-              <span class="fs-14 cr-black">Badan Pemberdayaan Masyarakat</span>
-            </a-col>
-          </a-row>
-        </a-list-item>
-        <a-list-item>
-          <a-row :gutter="8" style="width: 100%">
-            <a-col :xs="24" :sm="6" :md="4">
-              <span class="fs-14 cr-gray">NIP</span>
-            </a-col>
-            <a-col :xs="24" :sm="18" :md="20">
-              <span class="fs-14 cr-black">09298227727277277</span>
-            </a-col>
-          </a-row>
-        </a-list-item>
-        <a-list-item>
-          <a-row :gutter="8" style="width: 100%">
-            <a-col :xs="24" :sm="6" :md="4">
-              <span class="fs-14 cr-gray">Nama Lengkap</span>
-            </a-col>
-            <a-col :xs="24" :sm="18" :md="20">
-              <span class="fs-14 cr-black">Jordi Alba S.kom</span>
+              <span class="fs-14 cr-black">Badan Kepegawaian Daerah Makassar</span>
             </a-col>
           </a-row>
         </a-list-item>
@@ -83,7 +63,7 @@
       <!-- if edit profile show modal -->
       <a-modal title="Edit" :footer="false" v-model="visibleEdit" @ok="handleEdit" centered>
         <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
-          <a-form-item label="Foto Profil" has-feedback>
+          <a-form-item label="Logo/Foto Profil" has-feedback>
             <a-upload
               name="avatar"
               listType="picture-card"
@@ -99,26 +79,14 @@
               </div>
             </a-upload>
           </a-form-item>
-          <a-form-item label="Nama SKPD" has-feedback>
+          <a-form-item label="Nama Instansi" has-feedback>
             <a-select
-              v-decorator="['skpd',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
-              placeholder="Pilih SKPD"
+              v-decorator="['bkd',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
+              placeholder="Pilih Instansi"
               showSearch
             >
-              <a-select-option :value="1">Badan Pemberdayaan Masyarakat</a-select-option>
+              <a-select-option :value="1">Badan Kepegawaian Daerah Makassar</a-select-option>
             </a-select>
-          </a-form-item>
-
-          <a-form-item label="Nama Lengkap" has-feedback>
-            <a-input
-              v-decorator="['nameEdit',{initialValue: 'Jordi Alba S.kom', rules: [{ required: true, message: 'Harus di isi!' }]}]"
-            />
-          </a-form-item>
-
-          <a-form-item label="NIP" has-feedback>
-            <a-input
-              v-decorator="['nipEdit',{initialValue: '09298227727277277', rules: [{ required: true, message: 'Harus di isi!' }]}]"
-            />
           </a-form-item>
 
           <a-form-item label="No. Telepon" has-feedback>
@@ -161,7 +129,7 @@
               <span class="fs-14 cr-gray">Username</span>
             </a-col>
             <a-col :xs="24" :sm="18" :md="20">
-              <span class="fs-14 cr-black">09298227727277277</span>
+              <span class="fs-14 cr-black">085213247455</span>
             </a-col>
           </a-row>
         </a-list-item>
@@ -235,7 +203,7 @@ export default {
       visibleEditPassword: false,
       confirmDirty: false,
       loading: false,
-      imageUrl: "/user.png"
+      imageUrl: "https://img4.apk.tools/300/7/b/9/com.bkpsdmd.portal.sample.png"
     };
   },
   methods: {

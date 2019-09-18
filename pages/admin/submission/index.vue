@@ -72,6 +72,15 @@
       @ok="handleReject"
     >
       <a-form layout="vertical" :form="form" @submit="handleSubmitReject" hideRequiredMark>
+        <a-form-item label="Dokumen Penolakan">
+          <a-upload-dragger name="file" :multiple="true" action="#" @change="handleChange" v-decorator="['fileReject',{rules: [{ required: true, message: 'Harus di isi!' }]}]">
+            <p class="ant-upload-drag-icon">
+              <a-icon type="inbox" />
+            </p>
+            <p class="ant-upload-text fs-14 cr-gray">Click or drag file to this area to upload</p>
+          </a-upload-dragger>
+        </a-form-item>
+
         <a-form-item label="Alasan Penolakan">
           <a-textarea
             :rows="4"
@@ -93,7 +102,7 @@ const columns = [
   },
   { title: "BKD", dataIndex: "bkd", key: "bkd" },
   { title: "Peserta", dataIndex: "jumlah", key: "jumlah" },
-  { title: "Waktu Kegiatan", dataIndex: "createdAt", key: "createdAt" },
+  { title: "Tanggal Kegiatan", dataIndex: "createdAt", key: "createdAt" },
   {
     title: "Action",
     key: "operation",

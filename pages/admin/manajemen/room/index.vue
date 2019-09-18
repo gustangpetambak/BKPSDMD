@@ -31,23 +31,16 @@
       <a-form layout="vertical" :form="form" @submit="handleSubmitAdd" hideRequiredMark>
         <a-form-item label="Nama Tempat Kegiatan" has-feedback>
           <a-input
-            v-decorator="[
-          'nameAdd',
-          {
-            rules: [{ required: true, message: 'Harus di isi!' }]
-          }
-        ]"
+            v-decorator="['nameAdd',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-form-item label="Ruangan" has-feedback>
           <a-input
-            v-decorator="[
-          'roomAdd',
-          {
-            rules: [{ required: true, message: 'Harus di isi!' }]
-          }
-        ]"
+            v-decorator="['roomAdd',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
+        </a-form-item>
+        <a-form-item label="Alamat">
+          <a-textarea :rows="4" v-decorator="['addressAdd',{rules: [{ required: true, message: 'Harus di isi!' }]}]" />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan</a-button>
       </a-form>
@@ -65,6 +58,9 @@
           <a-input
             v-decorator="['roomEdit',{initialValue: '1B Lantai 1', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
+        </a-form-item>
+        <a-form-item label="Alamat">
+          <a-textarea :rows="4" v-decorator="['addressEdit',{initialValue: 'Jl. BTP Blok A No 537', rules: [{ required: true, message: 'Harus di isi!' }]}]" />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>
       </a-form>
@@ -89,6 +85,11 @@ const columns = [
     key: "room"
   },
   {
+    title: "Alamat",
+    dataIndex: "address",
+    key: "address"
+  },
+  {
     title: "Action",
     fixed: "right",
     width: 160,
@@ -100,12 +101,14 @@ const data = [
   {
     key: "1",
     name: "Campus I",
-    room: "1B Lantai 1"
+    room: "1B Lantai 1",
+    address: "Jl. BTP Blok A No 537"
   },
   {
     key: "2",
     name: "Campus II",
-    room: "2B Lantai 2"
+    room: "2B Lantai 2",
+    address: "Jl. Perintis Kemerdekaan 9 (Belakang Kampus STMIK Dipanegara)"
   }
 ];
 

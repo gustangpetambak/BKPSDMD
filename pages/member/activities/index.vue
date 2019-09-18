@@ -13,7 +13,7 @@
           </span>
         </span>
 
-        <span slot="action" slot-scope="text" :key="text">
+        <span slot="action" slot-scope="text, record">
           <nuxt-link to="/member/activities/rundown">Rundown</nuxt-link>
           <a-divider type="vertical"></a-divider>
           <nuxt-link to="/member/activities/detail">Detail</nuxt-link>

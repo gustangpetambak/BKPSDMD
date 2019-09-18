@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="title">Daftar Kegiatan</div>
+      <div class="title">Daftar Kegiatan Saya</div>
 
       <a-table :columns="columns" :dataSource="data" :scroll="{ x: 980 }">
         <span slot="status" slot-scope="text, record">
@@ -14,16 +14,9 @@
         </span>
 
         <span slot="action" slot-scope="text, record">
-          <span v-if="record.status === 'Progress'">
-            <nuxt-link to="/bkd/activities/rundown">Rundown</nuxt-link>
-            <a-divider type="vertical"></a-divider>
-            <nuxt-link to="/bkd/activities/formulir">Formulir</nuxt-link>
-          </span>
-          <span v-if="record.status === 'Finish'">
-            <nuxt-link to="/bkd/activities/rundown">Rundown</nuxt-link>
-            <a-divider type="vertical"></a-divider>
-            <nuxt-link to="/bkd/activities/detail">Detail</nuxt-link>
-          </span>
+          <nuxt-link to="/pengajar/activities/rundown">Rundown</nuxt-link>
+          <a-divider type="vertical"></a-divider>
+          <nuxt-link to="/pengajar/activities/detail">Detail</nuxt-link>
         </span>
       </a-table>
     </div>
@@ -37,7 +30,7 @@ const columns = [
     key: "name"
   },
   { title: "Peserta", dataIndex: "member", key: "member" },
-  { title: "Tanggal Kegiatan", dataIndex: "startDate", key: "startDate" },
+  { title: "Tanggal Mulai", dataIndex: "startDate", key: "startDate" },
   {
     title: "Status Kegiatan",
     width: 160,

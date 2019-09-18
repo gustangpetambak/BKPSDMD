@@ -31,12 +31,12 @@
       <a-form layout="vertical" :form="form" @submit="handleSubmitAdd" hideRequiredMark>
         <a-form-item label="Nama Widiasuara/Pengajar" has-feedback>
           <a-input
-            v-decorator="[
-          'nameAdd',
-          {
-            rules: [{ required: true, message: 'Harus di isi!' }]
-          }
-        ]"
+            v-decorator="['nameAdd',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
+          />
+        </a-form-item>
+        <a-form-item label="Nomor Telepon" has-feedback>
+          <a-input
+            v-decorator="['telpAdd',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan</a-button>
@@ -49,6 +49,11 @@
         <a-form-item label="Nama Widiasuara/Pengajar" has-feedback>
           <a-input
             v-decorator="['nameEdit',{initialValue: 'Widya Pitaloka', rules: [{ required: true, message: 'Harus di isi!' }]}]"
+          />
+        </a-form-item>
+        <a-form-item label="Nomor Telepon" has-feedback>
+          <a-input
+            v-decorator="['telpEdit',{initialValue: '085213247488', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>
@@ -67,6 +72,10 @@ const columns = [
     title: "Nama Widiasuara/Pengajar",
     dataIndex: "name",
     key: "name"
+  },{
+    title: "No. Telepon",
+    dataIndex: "telp",
+    key: "telp"
   },
   {
     title: "Action",
@@ -79,11 +88,13 @@ const columns = [
 const data = [
   {
     key: "1",
-    name: "Widya Pitaloka"
+    name: "Widya Pitaloka",
+    telp: "085213247466"
   },
   {
     key: "2",
-    name: "Nur Elsa"
+    name: "Nur Elsa",
+    telp: "085213247488"
   }
 ];
 

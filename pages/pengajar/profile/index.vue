@@ -31,20 +31,10 @@
         <a-list-item>
           <a-row :gutter="8" style="width: 100%">
             <a-col :xs="24" :sm="6" :md="4">
-              <span class="fs-14 cr-gray">SKPD</span>
+              <span class="fs-14 cr-gray">Profesi</span>
             </a-col>
             <a-col :xs="24" :sm="18" :md="20">
-              <span class="fs-14 cr-black">Badan Pemberdayaan Masyarakat</span>
-            </a-col>
-          </a-row>
-        </a-list-item>
-        <a-list-item>
-          <a-row :gutter="8" style="width: 100%">
-            <a-col :xs="24" :sm="6" :md="4">
-              <span class="fs-14 cr-gray">NIP</span>
-            </a-col>
-            <a-col :xs="24" :sm="18" :md="20">
-              <span class="fs-14 cr-black">09298227727277277</span>
+              <span class="fs-14 cr-black">Guru Professional</span>
             </a-col>
           </a-row>
         </a-list-item>
@@ -99,14 +89,11 @@
               </div>
             </a-upload>
           </a-form-item>
-          <a-form-item label="Nama SKPD" has-feedback>
-            <a-select
-              v-decorator="['skpd',{rules: [{ required: true, message: 'Harus di isi!' }]}]"
-              placeholder="Pilih SKPD"
-              showSearch
-            >
-              <a-select-option :value="1">Badan Pemberdayaan Masyarakat</a-select-option>
-            </a-select>
+
+          <a-form-item label="Profesi" has-feedback>
+            <a-input
+              v-decorator="['profesiEdit',{initialValue: 'Guru Professional', rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            />
           </a-form-item>
 
           <a-form-item label="Nama Lengkap" has-feedback>
@@ -115,15 +102,9 @@
             />
           </a-form-item>
 
-          <a-form-item label="NIP" has-feedback>
-            <a-input
-              v-decorator="['nipEdit',{initialValue: '09298227727277277', rules: [{ required: true, message: 'Harus di isi!' }]}]"
-            />
-          </a-form-item>
-
           <a-form-item label="No. Telepon" has-feedback>
             <a-input
-              v-decorator="['telpEdit',{initialValue: '315049', rules: [{ required: true, message: 'Harus di isi!' }]}]"
+              v-decorator="['telpEdit',{initialValue: '085213247455', rules: [{ required: true, message: 'Harus di isi!' }]}]"
             />
           </a-form-item>
 
@@ -161,7 +142,7 @@
               <span class="fs-14 cr-gray">Username</span>
             </a-col>
             <a-col :xs="24" :sm="18" :md="20">
-              <span class="fs-14 cr-black">09298227727277277</span>
+              <span class="fs-14 cr-black">085213247455</span>
             </a-col>
           </a-row>
         </a-list-item>
