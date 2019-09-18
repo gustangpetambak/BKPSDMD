@@ -2,7 +2,7 @@
   <div class="container">
     <a-row :gutter="16" type="flex" justify="space-around" align="middle">
       <a-col :xs="24" :sm="12" :md="12">
-        <div class="title">Daftar Satuan Kerja Perangkat Daerah</div>
+        <div class="title">Daftar Badan Kepegawaian Daerah (BKD)</div>
       </a-col>
       <a-col :xs="24" :sm="12" :md="12" class="text-right">
         <a-button
@@ -26,7 +26,7 @@
       </span>
     </a-table>
 
-    <!-- if add skpd show modal -->
+    <!-- if add bkd show modal -->
     <a-modal title="Tambah" :footer="false" v-model="visibleAdd" @ok="handleAdd" centered>
       <a-form layout="vertical" :form="form" @submit="handleSubmitAdd" hideRequiredMark>
         <a-form-item label="Nama / Kantor" has-feedback>
@@ -66,7 +66,7 @@
       </a-form>
     </a-modal>
 
-    <!-- if edit skpd show modal -->
+    <!-- if edit bkd show modal -->
     <a-modal title="Edit" :footer="false" v-model="visibleEdit" @ok="handleEdit" centered>
       <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
         <a-form-item label="Nama / Kantor" has-feedback>
@@ -100,7 +100,7 @@ const columns = [
     key: "key"
   },
   {
-    title: "Nama SKPD",
+    title: "Nama BKD",
     dataIndex: "name",
     key: "name"
   },
@@ -142,7 +142,7 @@ export default {
   },
   head() {
     return {
-      title: "Daftar Satuan Kerja Perangkat Daerah"
+      title: "Daftar Badan Kepegawaian Daerah"
     };
   },
   data() {

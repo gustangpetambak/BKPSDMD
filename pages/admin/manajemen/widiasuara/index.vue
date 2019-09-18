@@ -2,7 +2,7 @@
   <div class="container">
     <a-row :gutter="16" type="flex" justify="space-around" align="middle">
       <a-col :xs="24" :sm="12" :md="12">
-        <div class="title">Daftar Satuan Kerja Perangkat Daerah</div>
+        <div class="title">Daftar Widiasuara / Pengajar</div>
       </a-col>
       <a-col :xs="24" :sm="12" :md="12" class="text-right">
         <a-button
@@ -26,36 +26,13 @@
       </span>
     </a-table>
 
-    <!-- if add skpd show modal -->
-    <a-modal title="Tambah" :footer="false" v-model="visibleAdd" @ok="handleAdd" centered>
+    <!-- if add room show modal -->
+    <a-modal title="Tambah Widiasuara/Pengajar" :footer="false" v-model="visibleAdd" @ok="handleAdd" centered>
       <a-form layout="vertical" :form="form" @submit="handleSubmitAdd" hideRequiredMark>
-        <a-form-item label="Nama / Kantor" has-feedback>
+        <a-form-item label="Nama Widiasuara/Pengajar" has-feedback>
           <a-input
             v-decorator="[
-          'name',
-          {
-            rules: [{ required: true, message: 'Harus di isi!' }]
-          }
-        ]"
-          />
-        </a-form-item>
-
-        <a-form-item label="No. Telepon" has-feedback>
-          <a-input
-            v-decorator="[
-          'telp',
-          {
-            rules: [{ required: true, message: 'Harus di isi!' }]
-          }
-        ]"
-          />
-        </a-form-item>
-
-        <a-form-item label="Alamat">
-          <a-textarea
-            :rows="4"
-            v-decorator="[
-          'address',
+          'nameAdd',
           {
             rules: [{ required: true, message: 'Harus di isi!' }]
           }
@@ -66,25 +43,12 @@
       </a-form>
     </a-modal>
 
-    <!-- if edit skpd show modal -->
-    <a-modal title="Edit" :footer="false" v-model="visibleEdit" @ok="handleEdit" centered>
+    <!-- if edit room show modal -->
+    <a-modal title="Edit Widiasuara/Pengajar" :footer="false" v-model="visibleEdit" @ok="handleEdit" centered>
       <a-form layout="vertical" :form="form" @submit="handleSubmitEdit" hideRequiredMark>
-        <a-form-item label="Nama / Kantor" has-feedback>
+        <a-form-item label="Nama Widiasuara/Pengajar" has-feedback>
           <a-input
-            v-decorator="['nameEdit',{initialValue: 'Badan Pemberdayaan Masyarakat', rules: [{ required: true, message: 'Harus di isi!' }]}]"
-          />
-        </a-form-item>
-
-        <a-form-item label="No. Telepon" has-feedback>
-          <a-input
-            v-decorator="['telpEdit',{initialValue: '315049', rules: [{ required: true, message: 'Harus di isi!' }]}]"
-          />
-        </a-form-item>
-
-        <a-form-item label="Alamat">
-          <a-textarea
-            :rows="4"
-            v-decorator="['addressEdit',{initialValue: 'Jl. Ahmad Yani No.2', rules: [{ required: true, message: 'Harus di isi!' }]}]"
+            v-decorator="['nameEdit',{initialValue: 'Widya Pitaloka', rules: [{ required: true, message: 'Harus di isi!' }]}]"
           />
         </a-form-item>
         <a-button type="primary" html-type="submit">Simpan Perubahan</a-button>
@@ -100,12 +64,10 @@ const columns = [
     key: "key"
   },
   {
-    title: "Nama SKPD",
+    title: "Nama Widiasuara/Pengajar",
     dataIndex: "name",
     key: "name"
   },
-  { title: "Alamat", dataIndex: "address", key: "address" },
-  { title: "Telepon", dataIndex: "telp", key: "telp" },
   {
     title: "Action",
     fixed: "right",
@@ -117,32 +79,22 @@ const columns = [
 const data = [
   {
     key: "1",
-    name: "Badan Pemberdayaan Masyarakat",
-    address: "Jl. Ahmad Yani No.2",
-    telp: "315049"
+    name: "Widya Pitaloka"
   },
   {
     key: "2",
-    name: "Kantor Kependudukan Catatan Sipil",
-    address: "Jl. Slt. Alauddin, No.309",
-    telp: "866520"
-  },
-  {
-    key: "3",
-    name: "Kantor Pelayanan Administrasi Perizinan",
-    address: "Jl. Urip Sumihardjo No.8",
-    telp: "436488"
+    name: "Nur Elsa"
   }
 ];
 
 export default {
-  name: "skpd",
+  name: "room",
   beforeCreate() {
     this.form = this.$form.createForm(this);
   },
   head() {
     return {
-      title: "Daftar Satuan Kerja Perangkat Daerah"
+      title: "Management Widiasuara/Pengajar"
     };
   },
   data() {
