@@ -89,7 +89,7 @@ export default {
   name: "details",
   head() {
     return {
-      title: "Detail Kegiatan - BKPSDMD"
+      title: "Detail Kegiatan - SIPP BPSDM Makassar"
     };
   },
   data() {

@@ -21,6 +21,14 @@
     }
     & .avatar {
         padding: 24px 0;
+        & img {
+            max-width: 100%;
+            height: auto !important;
+            width: auto !important;
+            max-height: 100%;
+            margin: 0 auto;
+            padding: 2px;
+        }
         & .avatar-item {
             text-align: center;
             margin: 0 auto;

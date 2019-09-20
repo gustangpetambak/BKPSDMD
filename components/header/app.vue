@@ -6,7 +6,7 @@
           <a-avatar style="backgroundColor:#fafafa;color:#484848" icon="menu-fold" />
         </a>
       </div>
-      <div style="margin-right: 16px" class="hidden-dekstop fs-18 cr-black">BKPSDMD</div>
+      <div style="margin-right: 16px" class="hidden-dekstop fs-18 cr-black">SIPP BPSDM</div>
       <div class="hidden-mobile">
         <a-badge status="success" text="Online" />
       </div>
@@ -25,7 +25,7 @@
     <a-drawer placement="left" :closable="false" @close="onClose" :visible="visible">
       <div slot="title">
         <div class="d-flex align-items-center">
-          <div>BKPSDMD</div>
+          <div>SIPP BPSDM</div>
           <div class="ml-auto">
             <a-button @click="onClose" shape="circle" icon="close" />
           </div>
@@ -34,9 +34,9 @@
 
       <div class="avatar d-flex align-items-center" style="margin-bottom: 16px">
         <div class="avatar-item" style="margin-right: 8px">
-          <a-avatar size="large" src="/user.png" />
+          <a-avatar size="large" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Coat_of_arms_of_South_Sulawesi.svg/1200px-Coat_of_arms_of_South_Sulawesi.svg.png" />
         </div>
-        <div class="name-user fs-14 cr-black">Jordi Alba Mustafa</div>
+        <div class="name-user fs-14 cr-black">Pemprov Makassar</div>
       </div>
 
       <a-menu @click="handleClick" :defaultSelectedKeys="['1']" mode="inline">

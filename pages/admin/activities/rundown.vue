@@ -209,7 +209,7 @@ export default {
   },
   head() {
     return {
-      title: "Rundown Kegiatan - BKPSDMD"
+      title: "Rundown Kegiatan - SIPP BPSDM Makassar"
     };
   },
   data() {

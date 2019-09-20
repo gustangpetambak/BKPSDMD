@@ -2,12 +2,12 @@
   <div>
     <div class="brand-sider d-flex align-items-center">
       <!-- <div class="logo" :style="{ backgroundImage: 'url(/logo.png)' }" /> -->
-      <div class="logo-text">BKPSDMD</div>
+      <div class="logo-text">SIPP BPSDM</div>
     </div>
     <div class="avatar d-flex align-items-center">
       <div class="avatar-item">
         <a-avatar :size="64" src="/user.png" />
-        <div class="name-user">Jordi Alba Mustafa</div>
+        <div class="name-user">Pemprov Makassar</div>
       </div>
     </div>
     <a-menu :defaultSelectedKeys="['1']" mode="inline">
