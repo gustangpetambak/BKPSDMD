@@ -10,7 +10,7 @@
             <header-app />
           </a-layout-header>
         </a-affix>
-        <a-layout-content style="margin: 16px">
+        <a-layout-content style="margin: 24px">
           <nuxt />
         </a-layout-content>
         <a-layout-footer style="text-align: center">

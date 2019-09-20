@@ -34,7 +34,7 @@
 
       <div class="avatar d-flex align-items-center" style="margin-bottom: 16px">
         <div class="avatar-item" style="margin-right: 8px">
-          <a-avatar size="large" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Coat_of_arms_of_South_Sulawesi.svg/1200px-Coat_of_arms_of_South_Sulawesi.svg.png" />
+          <a-avatar size="large" src="/user.png" />
         </div>
         <div class="name-user fs-14 cr-black">Pemprov Makassar</div>
       </div>

@@ -1,3 +1,3 @@
 <template>
-    <span>&copy; 2019 BKPSDMD</span>
+    <span>2019 &copy; SIPP BPSDM PEMPROV SULSEL</span>
 </template>

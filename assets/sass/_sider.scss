@@ -3,7 +3,7 @@
     max-width: 225px !important;
     min-width: 225px !important;
     width: 225px !important;
-    background-color: #1e90ff;
+    background-color: #403c38;
     & .brand-sider {
         line-height: 64px;
         height: 64px;
@@ -43,13 +43,13 @@
         background: transparent;
         border: none;
         & .ant-menu-item-group-title {
-            color: rgba($color: #ffffff, $alpha: .5);
+            color: rgba($color: #ffffff, $alpha: .45);
         }
         & .ant-menu-item,
         & .ant-menu-submenu-title {
-            color: rgba($color: #ffffff, $alpha: .8);
+            color: rgba($color: #ffffff, $alpha: .6);
             & a {
-                color: rgba($color: #ffffff, $alpha: .8);
+                color: rgba($color: #ffffff, $alpha: .6);
             }
         }
         & .ant-menu-item-selected {
@@ -63,7 +63,7 @@
         background-color: rgba($color: #ffffff, $alpha: .2);
     }
     & .ant-layout-sider-trigger {
-        background-color: #1e90ff;
+        background-color: #403c38;
         width: 225px !important;
     }
 }
